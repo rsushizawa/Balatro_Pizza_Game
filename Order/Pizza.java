@@ -2,27 +2,40 @@ package Balatro_Pizza_Game.Order;
 
 import Balatro_Pizza_Game.Baralho.Toppings;
 
-public enum Pizza {
-    PEPPERONI("Pizza de Pepperoni",100,Toppings.PEPPERONI, Toppings.CHEESE),
-    PORTUGUESA("Pizza Portuguesa",200,Toppings.PEPPERONI, Toppings.CHEESE, Toppings.BELL_PEPPERS, Toppings.ONIONS);
+import java.util.*;
 
-    private String nome;
-    private int chips;
-    private Toppings[] toppings;
-    Pizza(String nome,int chips, Toppings... toppings){
-        this.nome = nome;
-        this.chips = chips;
-        this.toppings = toppings;
+public class Pizza {
+    private EnumSet<Toppings> toppings;
+    private int base_chips = 0;
+
+    public Pizza(List<Toppings> toppings) {
+        for(Toppings topping : toppings) {
+            this.toppings.add(topping);
+            this.base_chips += topping.getId();
+        }
     }
 
-    public String getNome() {
-        return nome;
+    public PizzaType verifyPizza(Pizza pizza){
+        List<PizzaType> pizzaType =  new ArrayList<>(Arrays.asList(PizzaType.values()));
+        Collections.sort(pizza.getToppings());
+        for(PizzaType type : pizzaType) {
+            Collections.sort(type.getToppings());
+            if(pizza.getToppings().equals(type.getToppings())) {
+                return type;
+            }
+        }
+        return null;
     }
 
-    public int getChips() {
-        return chips;
+    public void addTopping(Toppings topping) {
+        this.toppings.add(topping);
     }
-    public Toppings[] getToppings() {
-        return toppings;
+
+    public void removeTopping(Toppings topping) {
+        this.toppings.remove(topping);
+    }
+
+    public List<Toppings> getToppings() {
+        return new ArrayList<>(toppings);
     }
 }

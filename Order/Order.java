@@ -4,11 +4,11 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Order {
-    private Pizza pizza;
+    private PizzaType pizza;
     private Boolean status = false;
 
     public Order() {
-        Pizza[] pizzas = Pizza.values();
+        PizzaType[] pizzas = PizzaType.values();
         Random rand = new Random();
         int  index = rand.nextInt(pizzas.length);
         this.pizza = pizzas[index];
