@@ -1,4 +1,4 @@
-package Baralho;
+package Balatro_Pizza_Game.Baralho;
 
 
 public class Decks{
