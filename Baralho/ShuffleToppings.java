@@ -1,6 +1,8 @@
-package Balatro_Pizza_Game;
+package Baralho;
+import Baralho.Decks;
 
 import java.util.*;
+
 public class ShuffleToppings {
     public static void main(String[] args) {
         List<Toppings> pizzaToppings = new ArrayList<>(Arrays.asList(Toppings.values()));
@@ -12,6 +14,9 @@ public class ShuffleToppings {
             pizzaOrder.add(pizzaToppings.get(i));
         }
         System.out.println(pizzaOrder);
+        Decks a = new Decks();
+        a.getDeckSting();
+        
     }
 
 

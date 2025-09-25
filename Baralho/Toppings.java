@@ -1,4 +1,4 @@
-package Balatro_Pizza_Game;
+package Baralho;
 
 public enum Toppings {
         CHEESE(0, "Cheese"),
