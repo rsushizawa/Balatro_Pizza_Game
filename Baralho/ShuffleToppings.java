@@ -14,8 +14,20 @@ public class ShuffleToppings {
             pizzaOrder.add(pizzaToppings.get(i));
         }
         System.out.println(pizzaOrder);
+
+        System.out.println("------------------------------------");
+        System.out.println("------------Ordered Deck------------");
+        System.out.println("------------------------------------");
+        
         Decks a = new Decks();
-        a.getDeckSting();
+        a.getDeckString();
+
+        System.out.println("------------------------------------");
+        System.out.println("------------Shuffled Deck-----------");
+        System.out.println("------------------------------------");
+        
+        a.shuffleDeck();
+        a.getDeckString();
         
     }
 
