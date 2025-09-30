@@ -1,7 +1,9 @@
 package Balatro_Pizza_Game.Order;
 
-import java.util.Arrays;
 import java.util.Random;
+import java.util.Arrays;
+import java.util.List;
+
 
 public class Order {
     private PizzaType pizza;
@@ -16,6 +18,6 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Pedido de " + this.pizza.getNome() + ". Ingrdientes: " + Arrays.toString(this.pizza.getToppings());
+        return "Pedido de " + this.pizza.getNome() + ". Ingrdientes: " + this.pizza.getToppings().toString();
     }
 }
