@@ -1,6 +1,7 @@
 package Balatro_Pizza_Game.Player;
 
 import Balatro_Pizza_Game.Baralho.Card;
+
 import Balatro_Pizza_Game.Baralho.Decks;
 import Balatro_Pizza_Game.Baralho.Toppings;
 import Balatro_Pizza_Game.Order.Pizza;
@@ -22,6 +23,7 @@ public class Hand {
 
     public void addCardToHand(Decks deck) {
         cards.add(deck.drawCard());
+
     }
     public void removeCard(Card card) {
         cards.remove(card);
