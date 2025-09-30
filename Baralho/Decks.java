@@ -1,8 +1,9 @@
 package Balatro_Pizza_Game.Baralho;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Decks{
-    private List<Card> deck;
+    private List<Card> deck = new ArrayList<Card>();
     private String naipes[] = {"Hearts", "Diamonds", "Clubs", "Spades"};
 
     public Decks(){

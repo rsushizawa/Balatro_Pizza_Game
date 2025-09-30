@@ -13,12 +13,24 @@ import java.util.List;
 
 public class Hand {
     private ArrayList<Card> cards = new ArrayList<Card>();
+    private ArrayList<Card> selectedCards = new ArrayList<>();
     private int maxHandSize = 7;
 
     public Hand(Decks deck) {
         for(int i = 0; i < maxHandSize; i++){
             cards.add(deck.drawCard());
         }
+    }
+
+    public void selectCard(Card card){
+        selectedCards.add(card);
+    }
+
+    public void deselectCard(Card card){
+        selectedCards.remove(card);
+    }
+    public void clearCards(){
+        cards.clear();
     }
 
     public void addCardToHand(Decks deck) {

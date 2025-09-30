@@ -2,6 +2,7 @@ package Balatro_Pizza_Game.Order;
 
 import Balatro_Pizza_Game.Baralho.Toppings;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public enum PizzaType {
@@ -10,7 +11,7 @@ public enum PizzaType {
 
     private String nome;
     private int chips;
-    private List<Toppings> toppings;
+    private List<Toppings> toppings = new ArrayList<>();
 
     PizzaType(String nome, int chips, Toppings... toppings){
         this.nome = nome;
