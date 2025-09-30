@@ -1,6 +1,8 @@
 package Balatro_Pizza_Game.Player;
 
 import Balatro_Pizza_Game.Baralho.Card;
+
+import Balatro_Pizza_Game.Baralho.Decks;
 import Balatro_Pizza_Game.Baralho.Toppings;
 import Balatro_Pizza_Game.Order.Pizza;
 import Balatro_Pizza_Game.Order.PizzaType;
@@ -11,9 +13,17 @@ import java.util.List;
 
 public class Hand {
     private ArrayList<Card> cards = new ArrayList<Card>();
+    private int maxHandSize = 7;
 
-    public void addCard(Card card) {
-        cards.add(card);
+    public Hand(Decks deck) {
+        for(int i = 0; i < maxHandSize; i++){
+            cards.add(deck.drawCard());
+        }
+    }
+
+    public void addCardToHand(Decks deck) {
+        cards.add(deck.drawCard());
+
     }
     public void removeCard(Card card) {
         cards.remove(card);
