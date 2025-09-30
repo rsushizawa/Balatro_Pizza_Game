@@ -10,13 +10,4 @@ import java.util.List;
 public class Player {
     private int money = 0;
 
-    public Pizza buildPizza(Card... cards) {
-        int base_chips = 0;
-        List<Toppings> toppings = new ArrayList<>();
-        for (Card card : cards) {
-            toppings.add(card.getTopping());
-        }
-        return new Pizza(toppings);
-    }
-
 }
