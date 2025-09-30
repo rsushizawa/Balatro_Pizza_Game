@@ -5,7 +5,7 @@ import java.util.Collections;
 
 public class Decks{
     private Card deck[] = new Card[56];
-    private String naipes[] = {"Hearts", "Diamonds", "Clubs", "Spades"};
+    private String naipes[] = {"BAD", "DECENT", "GOOD", "PERFECT"};
 
     public Decks(){
         for(int i = 0; i < naipes.length; i++){

@@ -10,6 +10,6 @@ public class Card {
 
     @Override
     public String toString(){
-        return this.Topping + " of " + this.naipe;
+        return this.naipe + " " + this.Topping;
     }
 }
