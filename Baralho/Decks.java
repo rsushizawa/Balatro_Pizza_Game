@@ -2,13 +2,13 @@ package Balatro_Pizza_Game.Baralho;
 
 
 public class Decks{
-    private Card deck[] = new Card[56];
-    private String naipes[] = {"Hearts", "Diamonds", "Clubs", "Spades"};
+    private Card deck[] = new Card[52];
+    private Card naipes[] = new Card[4];
 
     public Decks(){
         for(int i = 0; i < naipes.length; i++){
             for(int j = 0; j < Toppings.values().length; j++){
-                deck [(i* Toppings.values().length)+j] = new Card(naipes[i], Toppings.values()[j]);
+                deck [(i* Toppings.values().length)+j] = new Card(Quality.values()[i], Toppings.values()[j]);
             }
         }
     }
