@@ -12,9 +12,10 @@ public class ShuffleToppings {
         for ( i= 0; i < 6; i ++) {
             pizzaOrder.add(pizzaToppings.get(i));
         }
-        System.out.println(pizzaOrder);
+        System.out.println(pizzaToppings);
+        //System.out.println(pizzaOrder);
         Decks a = new Decks();
-        a.getDeckSting();
+        //a.getDeckString();
         Order o = new Order();
         System.out.println(o.toString());
     }
