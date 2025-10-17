@@ -1,31 +1,30 @@
 package Balatro_Pizza_Game.Baralho;
 
 public enum Toppings {
-        CHEESE(0, "Cheese"),
-        PEPPERONI(1, "Pepperoni"),
-        GREEN_OLIVES(2, "Green Olives"),
-        CHICKEN(3, "Chicken"),
-        MUSHROOMS(4, "Mushrooms"),
-        ONIONS(5, "Onions"),
-        BACON(6, "Bacon"),
-        OREGANO(7, "Oregano"),
-        PEPPERS(8, "Peppers"),
-        PINEAPPLE(9, "Pineapple"),
-        BLACK_OLIVES(10, "Black Olives"),
-        SAUSAGE(11, "Sausage"),
-        SPINACH(12, "Spinach"),
-        BELL_PEPPERS(13, "Bell Peppers");
+        DEUCE(2, "Oregano"),
+        THREE(3, "Garlic"),
+        FOUR(4, "Bell Peppers"),
+        FIVE(5, "Basil Leaves"),
+        SIX(6, "Onion"),
+        SEVEN(7, "Tomatoes"),
+        EIGHT(8, "Olives"),
+        NINE(9, "Cheese"),
+        TEN(10, "Mushrooms"),
+        JACK(10, "Bacon"),
+        QUEEN(10, "Ham"),
+        KING(10, "Sausage"),
+        ACE(11, "Olive Oil");
 
 
-        private final int id;
+        private final int value;
         private final String name;
 
-        private Toppings (int id, String name) {
-            this.id = id;
+        private Toppings (int value, String name) {
+            this.value = value;
             this.name = name;
         }
         public int getId() {
-            return id;
+            return value;
         }
 
         @Override

@@ -1,14 +1,14 @@
 package Balatro_Pizza_Game.Baralho;
 public class Card {
-    private String naipe;
+    private Quality naipe;
     private Toppings topping;
-    
-    public Card(String naipe, Toppings Topping){
+
+    public Card(Quality naipe, Toppings Topping){
         this.naipe = naipe;
         this.topping = Topping;
     }
 
-    public String getNaipe() {
+    public Quality getNaipe() {
         return naipe;
     }
 
@@ -18,6 +18,6 @@ public class Card {
 
     @Override
     public String toString(){
-        return this.topping + " of " + this.naipe;
+        return this.naipe.getSuits() + " "+ this.topping;
     }
 }
