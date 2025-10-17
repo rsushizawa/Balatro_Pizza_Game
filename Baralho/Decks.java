@@ -1,9 +1,15 @@
 package Balatro_Pizza_Game.Baralho;
 
+import java.security.SecureRandom;
 
 public class Decks{
-    private Card deck[] = new Card[52];
-    private Card naipes[] = new Card[4];
+
+    int deckSize = 52;
+
+    int currentCard = 0;
+
+    private Card deck[] = new Card[deckSize];
+    private final Card naipes[] = new Card[4];
 
     public Decks(){
         for(int i = 0; i < naipes.length; i++){
@@ -13,9 +19,33 @@ public class Decks{
         }
     }
 
-    public void getDeckSting(){
-        for(int i=0; i<deck.length; i++){
-            System.out.println(deck[i].toString());
+    public void getDeckString(){
+        for(Card i : deck){
+            System.out.println(i.toString());
         }
     }
+
+
+    public void shuffle (){
+        SecureRandom rand = new SecureRandom();
+
+        int r;
+        for (int i = 0; i < deckSize; i++){
+            r = rand.nextInt(deckSize);
+            Card aux = deck[i];
+            deck[i] = deck[r];
+            deck[r] = aux;
+        }
+    }
+
+    public Card dealCard() {
+        if (currentCard < deckSize) {
+            return deck[currentCard++];
+        }
+        else {
+            return null;
+        }
+
+    }
+
 }
