@@ -8,9 +8,7 @@ import java.util.List;
 
 public enum PizzaType {
     MARGHERITA("Margherita", 20, 2, Toppings.SEVEN, Toppings.FIVE, Toppings.NINE, Toppings.ACE), // Tomatoes, Basil, Cheese, Olive Oil
-    PEPPERONI("Pepperoni", 25, 3, Toppings.NINE, Toppings.KING), // Cheese, Sausage
-    MEAT_LOVERS("Meat Lovers", 30, 4, Toppings.JACK, Toppings.QUEEN, Toppings.KING), // Bacon, Ham, Sausage
-    VEGGIE("Veggie", 15, 2, Toppings.DEUCE, Toppings.THREE, Toppings.FOUR, Toppings.FIVE, Toppings.SIX, Toppings.SEVEN, Toppings.EIGHT, Toppings.TEN); // All veggie toppings
+    PEPPERONI("Pepperoni", 25, 3, Toppings.NINE, Toppings.KING); // Cheese, Sausage
 
     private String nome;
     private int chips;

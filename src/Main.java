@@ -12,17 +12,14 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        // Create a deck of cards
         Deck deck = new Deck();
 
-        // Create a player's hand
         Hand hand = new Hand(deck);
 
-        // Get the cards from the hand
         List<Card> cardsInHand = hand.getCards();
         System.out.println("Cards in hand: " + cardsInHand);
 
-        // Let's create a custom hand for testing a Royal Flush
+        // Royal Flush
         List<Card> royalFlushHand = new ArrayList<>();
         royalFlushHand.add(new Card(Quality.DIAMONDS, Toppings.ACE));
         royalFlushHand.add(new Card(Quality.DIAMONDS, Toppings.KING));
@@ -36,12 +33,12 @@ public class Main {
         System.out.println("Poker hand: " + result.getPokerHand().getNome());
         System.out.println("Is it a pizza? " + (result.getPizzaType() != null ? result.getPizzaType().getNome() : "No"));
 
-        // Let's create a custom hand for testing a Margherita Pizza
+        //Let's create a custom hand for testing a Margherita Pizza
         List<Card> margheritaPizzaHand = new ArrayList<>();
-        margheritaPizzaHand.add(new Card(Quality.HEARTS, Toppings.SEVEN)); // Tomatoes
-        margheritaPizzaHand.add(new Card(Quality.CLUBS, Toppings.FIVE)); // Basil
-        margheritaPizzaHand.add(new Card(Quality.DIAMONDS, Toppings.NINE)); // Cheese
-        margheritaPizzaHand.add(new Card(Quality.SPADES, Toppings.ACE)); // Olive Oil
+        margheritaPizzaHand.add(new Card(Quality.HEARTS, Toppings.SEVEN));
+        margheritaPizzaHand.add(new Card(Quality.CLUBS, Toppings.FIVE));
+        margheritaPizzaHand.add(new Card(Quality.DIAMONDS, Toppings.NINE));
+        margheritaPizzaHand.add(new Card(Quality.SPADES, Toppings.ACE));
 
         System.out.println("\n--- Testing Margherita Pizza ---");
         System.out.println("Custom hand: " + margheritaPizzaHand);
