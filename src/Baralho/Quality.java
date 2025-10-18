@@ -1,4 +1,4 @@
-package Baralho;
+package Balatro_Pizza_Game.src.Baralho;
 
 public enum Quality {
     DIAMONDS("Gourmet"),

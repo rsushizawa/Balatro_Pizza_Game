@@ -1,11 +1,11 @@
-package Player;
+package Balatro_Pizza_Game.src.Player;
 
-import Baralho.Card;
+import Balatro_Pizza_Game.src.Baralho.Card;
 
-import Baralho.Deck;
-import Baralho.Toppings;
-import Order.Pizza;
-import Order.PizzaType;
+import Balatro_Pizza_Game.src.Baralho.Deck;
+import Balatro_Pizza_Game.src.Baralho.Toppings;
+import Balatro_Pizza_Game.src.Order.Pizza;
+import Balatro_Pizza_Game.src.Order.PizzaType;
 
 import java.util.ArrayList;
 import java.util.Arrays;

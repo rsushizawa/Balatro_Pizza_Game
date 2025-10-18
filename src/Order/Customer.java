@@ -1,5 +1,5 @@
-package Order;
-import Baralho.Toppings;
+package Balatro_Pizza_Game.src.Order;
+import Balatro_Pizza_Game.src.Baralho.Toppings;
 import java.util.*;
 
 

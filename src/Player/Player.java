@@ -1,6 +1,6 @@
-package Player;
+package Balatro_Pizza_Game.src.Player;
 
-import Baralho.Deck;
+import Balatro_Pizza_Game.src.Baralho.Deck;
 
 public class Player {
     private int money = 0;

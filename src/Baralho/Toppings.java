@@ -1,4 +1,4 @@
-package Baralho;
+package Balatro_Pizza_Game.src.Baralho;
 
 public enum Toppings {
         DEUCE(2, "Oregano"),

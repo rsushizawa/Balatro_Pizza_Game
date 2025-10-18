@@ -1,4 +1,4 @@
-package Baralho;
+package Balatro_Pizza_Game.src.Baralho;
 
 import javax.swing.*;
 import javax.swing.border.Border;
