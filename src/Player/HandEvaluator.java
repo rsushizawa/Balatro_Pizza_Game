@@ -3,23 +3,42 @@ package Balatro_Pizza_Game.src.Player;
 import Balatro_Pizza_Game.src.Baralho.Card;
 import Balatro_Pizza_Game.src.Baralho.Toppings;
 import Balatro_Pizza_Game.src.Order.PizzaType;
+import Balatro_Pizza_Game.src.Order.PokerHand;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class HandEvaluator {
 
-    public PizzaType evaluateHand(List<Card> cards) {
-        if (isRoyalFlush(cards)) return PizzaType.ROYAL_FLUSH;
-        if (isStraightFlush(cards)) return PizzaType.STRAIGHT_FLUSH;
-        if (isFourOfAKind(cards)) return PizzaType.FOUR_OF_A_KIND;
-        if (isFullHouse(cards)) return PizzaType.FULL_HOUSE;
-        if (isFlush(cards)) return PizzaType.FLUSH;
-        if (isStraight(cards)) return PizzaType.STRAIGHT;
-        if (isThreeOfAKind(cards)) return PizzaType.THREE_OF_A_KIND;
-        if (isTwoPair(cards)) return PizzaType.TWO_PAIR;
-        if (isOnePair(cards)) return PizzaType.PAIR;
-        return PizzaType.HIGH_CARD;
+    public HandEvaluationResult evaluateHand(List<Card> cards) {
+        PokerHand pokerHand = evaluatePokerHand(cards);
+        PizzaType pizzaType = evaluatePizza(cards);
+        return new HandEvaluationResult(pokerHand, pizzaType);
+    }
+
+    private PokerHand evaluatePokerHand(List<Card> cards) {
+        if (isRoyalFlush(cards)) return PokerHand.ROYAL_FLUSH;
+        if (isStraightFlush(cards)) return PokerHand.STRAIGHT_FLUSH;
+        if (isFourOfAKind(cards)) return PokerHand.FOUR_OF_A_KIND;
+        if (isFullHouse(cards)) return PokerHand.FULL_HOUSE;
+        if (isFlush(cards)) return PokerHand.FLUSH;
+        if (isStraight(cards)) return PokerHand.STRAIGHT;
+        if (isThreeOfAKind(cards)) return PokerHand.THREE_OF_A_KIND;
+        if (isTwoPair(cards)) return PokerHand.TWO_PAIR;
+        if (isOnePair(cards)) return PokerHand.PAIR;
+        return PokerHand.HIGH_CARD;
+    }
+
+    private PizzaType evaluatePizza(List<Card> cards) {
+        List<Toppings> handToppings = cards.stream().map(Card::getTopping).collect(Collectors.toList());
+        for (PizzaType pizzaType : PizzaType.values()) {
+            if (handToppings.containsAll(pizzaType.getToppings())) {
+                return pizzaType;
+            }
+        }
+        return null;
     }
 
     private boolean isOnePair(List<Card> cards) {

@@ -5,7 +5,6 @@ import Balatro_Pizza_Game.src.Baralho.Card;
 import Balatro_Pizza_Game.src.Baralho.Deck;
 import Balatro_Pizza_Game.src.Baralho.Toppings;
 import Balatro_Pizza_Game.src.Order.Pizza;
-import Balatro_Pizza_Game.src.Order.PizzaType;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -38,7 +37,7 @@ public class Hand {
         return new Pizza(toppings);
     }
 
-    public PizzaType evaluatePlayedHand(List<Card> playedCards) {
+    public HandEvaluationResult evaluatePlayedHand(List<Card> playedCards) {
         return handEvaluator.evaluateHand(playedCards);
     }
 
