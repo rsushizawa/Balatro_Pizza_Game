@@ -14,11 +14,13 @@ import java.util.List;
 public class Hand {
     private ArrayList<Card> cards = new ArrayList<Card>();
     private int maxHandSize = 7;
+    private HandEvaluator handEvaluator;
 
     public Hand(Deck deck) {
         for(int i = 0; i < maxHandSize; i++){
             cards.add(deck.dealCard());
         }
+        this.handEvaluator = new HandEvaluator();
     }
 
     public void addCardToHand(Deck deck) {
@@ -36,14 +38,8 @@ public class Hand {
         return new Pizza(toppings);
     }
 
-    public PizzaType evaluateHand(Pizza pizza){
-        List<PizzaType> pizzaTypes = Arrays.asList(PizzaType.values());
-        for (PizzaType pizzaType : pizzaTypes) {
-            if (pizzaType.getToppings().equals(pizza.getToppings())) {
-                return pizzaType;
-            }
-        }
-        return null;
+    public PizzaType evaluatePlayedHand(List<Card> playedCards) {
+        return handEvaluator.evaluateHand(playedCards);
     }
 
     public ArrayList<Card> getCards() {
