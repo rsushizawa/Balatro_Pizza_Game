@@ -8,7 +8,7 @@ public enum Quality {
 
     private final String name;
 
-    private Quality (String name) {
+    Quality (String name) {
         this.name = name;
     }
 

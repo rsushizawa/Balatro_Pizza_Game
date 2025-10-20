@@ -23,7 +23,7 @@ public class Hand {
             //lembrar de mudar para <Card>
             Set<String> selectedCards = new HashSet<>();
             Decks deck = new Decks();
-            JButton button = new JButton();
+            JButton button;
             JFrame frame = new JFrame();
             JPanel panel = new JPanel();
             int hand_capacity = 7;
@@ -49,7 +49,7 @@ public class Hand {
                 button.setBackground(defaultColor);
                 button.setBorder(defaultBorder);
 
-                button.setText(card[i].toString());
+                button.setText(card[i].getEnum());
                 button.addActionListener(e -> {
                     JButton clickedButton = (JButton) e.getSource();
                         System.out.println(selectedCards.size());
