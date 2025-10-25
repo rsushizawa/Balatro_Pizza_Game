@@ -1,7 +1,7 @@
-package Balatro_Pizza_Game.src.Player;
+package Player;
 
-import Balatro_Pizza_Game.src.Order.PizzaType;
-import Balatro_Pizza_Game.src.Order.PokerHand;
+import Order.PizzaType;
+import Order.PokerHand;
 
 public class HandEvaluationResult {
     private PokerHand pokerHand;

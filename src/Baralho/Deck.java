@@ -1,4 +1,4 @@
-package Balatro_Pizza_Game.src.Baralho;
+package Baralho;
 
 import java.security.SecureRandom;
 

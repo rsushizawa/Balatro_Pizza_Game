@@ -1,6 +1,6 @@
-package Balatro_Pizza_Game.src.Order;
+package Order;
 
-import Balatro_Pizza_Game.src.Baralho.Toppings;
+import Baralho.Toppings;
 
 import java.util.ArrayList;
 import java.util.Arrays;

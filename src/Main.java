@@ -1,11 +1,9 @@
-package Balatro_Pizza_Game.src;
-
-import Balatro_Pizza_Game.src.Baralho.Card;
-import Balatro_Pizza_Game.src.Baralho.Deck;
-import Balatro_Pizza_Game.src.Baralho.Quality;
-import Balatro_Pizza_Game.src.Baralho.Toppings;
-import Balatro_Pizza_Game.src.Player.Hand;
-import Balatro_Pizza_Game.src.Player.HandEvaluationResult;
+import Baralho.Card;
+import Baralho.Deck;
+import Baralho.Quality;
+import Baralho.Toppings;
+import Player.Hand;
+import Player.HandEvaluationResult;
 
 import java.util.ArrayList;
 import java.util.List;

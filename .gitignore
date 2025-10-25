@@ -1,6 +1,12 @@
 ### IntelliJ IDEA ###
 out/
+<<<<<<< HEAD
 .idea/
+=======
+!**/src/main/**/out/
+!**/src/test/**/out/
+.kotlin
+>>>>>>> a92150b (fix: packeges)
 
 ### Eclipse ###
 .apt_generated
@@ -25,5 +31,9 @@ bin/
 .vscode/
 
 ### Mac OS ###
+<<<<<<< HEAD
 .DS_Store
 
+=======
+.DS_Store
+>>>>>>> a92150b (fix: packeges)

@@ -1,4 +1,4 @@
-package Balatro_Pizza_Game.src.Order;
+package Order;
 
 import java.util.Random;
 import java.util.Arrays;

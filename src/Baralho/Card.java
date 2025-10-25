@@ -1,4 +1,5 @@
-package Balatro_Pizza_Game.src.Baralho;
+package Baralho;
+
 public class Card {
     private final Quality naipe;
     private final Toppings topping;
